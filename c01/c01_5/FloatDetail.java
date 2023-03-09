@@ -20,5 +20,17 @@ public class FloatDetail {
         System.out.println(num9);
         System.out.println(num10);
 
+        //浮点数使用陷阱：2.7和8.1/3比较
+
+        double num11 = 2.7;
+        double num12 = 8.1 / 3;
+
+        System.out.println(num11);
+        System.out.println(num12);//接近2.7 对运算结果是小数的进行相等判断时，要小心 应该是以两个数的差值的绝对值，在某个精度范围内进行判断
+
+
+        if (Math.abs(num11 - num12) < 0.00001) {
+            System.out.println("相等");
+        }
     }
 }
